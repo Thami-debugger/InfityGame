@@ -41,3 +41,5 @@ dialog { background: var(--ink); border: 1px solid rgba(245,241,231,.3); color: 
 @media (max-width: 850px) { .pay-form { justify-content: flex-start; } }
 
 .game-card form { display: block; }.game-card form button { width: 100%; }
+
+.hero-scene .hero-video { height: 100%; object-fit: cover; position: absolute; width: 100%; }
