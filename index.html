@@ -60,11 +60,11 @@
             <p>Walk in, choose a screen, and let the rivalry settle itself.</p>
           </div>
           <div class="game-grid">
-            <article class="game-card fifa"><div class="game-number">01</div><div><p>Football</p><h3>FIFA</h3><span>R10 / game</span></div><button type="button" data-game="FIFA">Select <span>&rarr;</span></button></article>
-            <article class="game-card gran"><div class="game-number">02</div><div><p>Racing</p><h3>GRAN TURISMO</h3><span>R10 / game</span></div><button type="button" data-game="Gran Turismo">Select <span>&rarr;</span></button></article>
-            <article class="game-card gta"><div class="game-number">03</div><div><p>Open world</p><h3>GTA</h3><span>R35 / 30 min</span></div><button type="button" data-game="GTA">Select <span>&rarr;</span></button></article>
-            <article class="game-card f1"><div class="game-number">04</div><div><p>Racing</p><h3>F1</h3><span>R15 / game</span></div><button type="button" data-game="F1">Select <span>&rarr;</span></button></article>
-            <article class="game-card cod"><div class="game-number">05</div><div><p>Action</p><h3>CALL OF DUTY</h3><span>R35 / 30 min</span></div><button type="button" data-game="Call of Duty">Select <span>&rarr;</span></button></article>
+            <article class="game-card fifa"><div class="game-number">01</div><div><p>Football</p><h3>FIFA</h3><span>R10 / game</span></div><button type="button" data-game="FIFA" data-price="10.00">Select <span>&rarr;</span></button></article>
+            <article class="game-card gran"><div class="game-number">02</div><div><p>Racing</p><h3>GRAN TURISMO</h3><span>R10 / game</span></div><button type="button" data-game="Gran Turismo" data-price="10.00">Select <span>&rarr;</span></button></article>
+            <article class="game-card gta"><div class="game-number">03</div><div><p>Open world</p><h3>GTA</h3><span>R35 / 30 min</span></div><button type="button" data-game="GTA" data-price="35.00">Select <span>&rarr;</span></button></article>
+            <article class="game-card f1"><div class="game-number">04</div><div><p>Racing</p><h3>F1</h3><span>R15 / game</span></div><button type="button" data-game="F1" data-price="15.00">Select <span>&rarr;</span></button></article>
+            <article class="game-card cod"><div class="game-number">05</div><div><p>Action</p><h3>CALL OF DUTY</h3><span>R35 / 30 min</span></div><button type="button" data-game="Call of Duty" data-price="35.00">Select <span>&rarr;</span></button></article>
           </div>
         </section>
 
@@ -81,7 +81,16 @@
         <section class="membership" id="book" aria-labelledby="member-title">
           <div class="membership-top"><p class="eyebrow"><span></span> Level up your play</p><span class="member-badge">MEMBER PASS</span></div>
           <div class="membership-main"><div><h2 id="member-title">UNLIMITED<br /><i>AFTER SCHOOL.</i></h2><p>Unlimited games for up to 3 hours a day. Your station, your squad, your monthly reset button.</p></div><div class="member-price"><span>R</span><strong>700</strong><em>/ month</em></div></div>
-          <div class="membership-bottom"><p>For regulars who know the best game is the next one.</p><a class="button button-light" href="https://wa.me/" target="_blank" rel="noreferrer">Get member pass <span aria-hidden="true">&rarr;</span></a></div>
+          <div class="membership-bottom"><p>For regulars who know the best game is the next one.</p><form class="pay-form" id="pay-form" action="https://www.payfast.co.za/eng/process" method="POST">
+            <input type="hidden" name="merchant_id" value="30190175" />
+            <input type="hidden" name="merchant_key" value="w8s8ndvwk7qld" />
+            <input type="hidden" name="amount" id="pay-amount" value="700.00" />
+            <input type="hidden" name="item_name" id="pay-item" value="Infinity Member Pass (monthly)" />
+            <label class="pay-qty" id="pay-qty-wrap" hidden>Games <input type="number" id="pay-qty" min="1" max="20" value="1" /></label>
+            <p class="pay-summary" id="pay-summary" aria-live="polite">Member pass &mdash; R700.00</p>
+            <button class="pay-reset" type="button" id="pay-reset" hidden>Back to member pass</button>
+            <button class="button button-light" type="submit" id="pay-submit">Pay R700.00 with PayFast <span aria-hidden="true">&rarr;</span></button>
+          </form></div>
         </section>
 
         <section class="visit-section" id="visit" aria-labelledby="visit-title">
