@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://infinitygames.co.za/sitemap.xml
+Sitemap: https://www.infinitygames.co.za/sitemap.xml
