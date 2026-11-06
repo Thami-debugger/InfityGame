@@ -60,11 +60,11 @@
             <p>Walk in, choose a screen, and let the rivalry settle itself.</p>
           </div>
           <div class="game-grid">
-            <article class="game-card fifa"><div class="game-number">01</div><div><p>Football</p><h3>FIFA</h3><span>R10 / game</span></div><form action="https://www.payfast.co.za/eng/process" method="POST"><input type="hidden" name="merchant_id" value="30190175" /><input type="hidden" name="merchant_key" value="w8s8ndvwk7qld" /><input type="hidden" name="amount" value="10.00" /><input type="hidden" name="item_name" value="Infinity Games - FIFA" /><button type="submit">Select <span>&rarr;</span></button></form></article>
-            <article class="game-card gran"><div class="game-number">02</div><div><p>Racing</p><h3>GRAN TURISMO</h3><span>R10 / game</span></div><form action="https://www.payfast.co.za/eng/process" method="POST"><input type="hidden" name="merchant_id" value="30190175" /><input type="hidden" name="merchant_key" value="w8s8ndvwk7qld" /><input type="hidden" name="amount" value="10.00" /><input type="hidden" name="item_name" value="Infinity Games - Gran Turismo" /><button type="submit">Select <span>&rarr;</span></button></form></article>
-            <article class="game-card gta"><div class="game-number">03</div><div><p>Open world</p><h3>GTA</h3><span>R35 / 30 min</span></div><form action="https://www.payfast.co.za/eng/process" method="POST"><input type="hidden" name="merchant_id" value="30190175" /><input type="hidden" name="merchant_key" value="w8s8ndvwk7qld" /><input type="hidden" name="amount" value="35.00" /><input type="hidden" name="item_name" value="Infinity Games - GTA" /><button type="submit">Select <span>&rarr;</span></button></form></article>
-            <article class="game-card f1"><div class="game-number">04</div><div><p>Racing</p><h3>F1</h3><span>R15 / game</span></div><form action="https://www.payfast.co.za/eng/process" method="POST"><input type="hidden" name="merchant_id" value="30190175" /><input type="hidden" name="merchant_key" value="w8s8ndvwk7qld" /><input type="hidden" name="amount" value="15.00" /><input type="hidden" name="item_name" value="Infinity Games - F1" /><button type="submit">Select <span>&rarr;</span></button></form></article>
-            <article class="game-card cod"><div class="game-number">05</div><div><p>Action</p><h3>CALL OF DUTY</h3><span>R35 / 30 min</span></div><form action="https://www.payfast.co.za/eng/process" method="POST"><input type="hidden" name="merchant_id" value="30190175" /><input type="hidden" name="merchant_key" value="w8s8ndvwk7qld" /><input type="hidden" name="amount" value="35.00" /><input type="hidden" name="item_name" value="Infinity Games - Call of Duty" /><button type="submit">Select <span>&rarr;</span></button></form></article>
+            <article class="game-card fifa"><div class="game-number">01</div><div><p>Football</p><h3>FIFA</h3><span>R10 / game</span></div><button class="game-select" type="button" data-game="FIFA" data-price="10.00">Select <span>&rarr;</span></button></article>
+            <article class="game-card gran"><div class="game-number">02</div><div><p>Racing</p><h3>GRAN TURISMO</h3><span>R10 / game</span></div><button class="game-select" type="button" data-game="Gran Turismo" data-price="10.00">Select <span>&rarr;</span></button></article>
+            <article class="game-card gta"><div class="game-number">03</div><div><p>Open world</p><h3>GTA</h3><span>R35 / 30 min</span></div><button class="game-select" type="button" data-game="GTA" data-price="35.00">Select <span>&rarr;</span></button></article>
+            <article class="game-card f1"><div class="game-number">04</div><div><p>Racing</p><h3>F1</h3><span>R15 / game</span></div><button class="game-select" type="button" data-game="F1" data-price="15.00">Select <span>&rarr;</span></button></article>
+            <article class="game-card cod"><div class="game-number">05</div><div><p>Action</p><h3>CALL OF DUTY</h3><span>R35 / 30 min</span></div><button class="game-select" type="button" data-game="Call of Duty" data-price="35.00">Select <span>&rarr;</span></button></article>
           </div>
         </section>
 
@@ -98,6 +98,25 @@
       <footer><a class="brand" href="#top"><span class="brand-mark">infinity</span><span>FUN &amp; GAMES</span></a><p>GOOD GAMES. GOOD PEOPLE. GOOD TIMES.</p><span>INFINITE VILLA / 2026</span></footer>
     </div>
     <dialog id="scene-dialog" aria-labelledby="scene-dialog-title"><button class="dialog-close" type="button" aria-label="Close video sample">&times;</button><div class="dialog-video"><video controls poster="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1500&q=85"><source src="gemini_generated_video_d31d9d95.mp4" type="video/mp4" /></video></div><h2 id="scene-dialog-title">30 SECOND GAME ROOM REEL</h2><p>A short sample scene from the energy we're building at Infinity.</p></dialog>
+    <dialog id="booking-dialog" aria-labelledby="booking-title">
+      <button class="dialog-close" type="button" id="booking-close" aria-label="Close booking form">&times;</button>
+      <p class="eyebrow"><span></span> Reserve your station</p>
+      <h2 id="booking-title">BOOK <i id="booking-game">YOUR GAME.</i></h2>
+      <p class="booking-intro">Choose an available day and time. Payment is required to confirm your booking.</p>
+      <form id="booking-form">
+        <label for="booking-date">Day</label>
+        <input id="booking-date" name="booking-date" type="date" required />
+        <label for="booking-time">Time</label>
+        <select id="booking-time" name="booking-time" required></select>
+        <p id="booking-availability" class="booking-availability" role="status"></p>
+        <button class="button button-primary" type="submit">Continue to payment <span aria-hidden="true">&rarr;</span></button>
+      </form>
+    </dialog>
+    <dialog id="confirmation-dialog" aria-labelledby="confirmation-title">
+      <h2 id="confirmation-title">BOOKING <i>CONFIRMED.</i></h2>
+      <p id="confirmation-message"></p>
+      <button class="button button-primary" type="button" id="confirmation-close">Done <span aria-hidden="true">&rarr;</span></button>
+    </dialog>
     <script src="script.js"></script>
   </body>
 </html>
